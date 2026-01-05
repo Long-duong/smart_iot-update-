@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - AI IoT System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            width: 420px;
+            max-width: 90%;
+            animation: slideUp 0.5s;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .login-header p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn-login {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-login:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-login:active {
+            transform: translateY(0);
+        }
+        
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .error-msg {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+            text-align: center;
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        .error-msg.show {
+            display: block;
+        }
+        
+        .hint {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        .hint strong {
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .features {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 5px 0;
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="icon">🔒</div>
+            <h1>GIÁM SÁT LỚP HỌC</h1>
+            <p>AI & IoT Monitoring System</p>
+        </div>
+        
+        <form id="loginForm" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="username">Tài khoản</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username"
+                    placeholder="Nhập tài khoản"
+                    required
+                    autocomplete="username"
+                    value="admin"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    placeholder="Nhập mật khẩu"
+                    required
+                    autocomplete="current-password"
+                    value="admin"
+                >
+            </div>
+            
+            <button type="submit" class="btn-login" id="btnLogin">
+                Đăng Nhập
+            </button>
+            
+            <div id="error" class="error-msg">
+                ❌ Sai tài khoản hoặc mật khẩu!
+            </div>
+        </form>
+        
+        <div class="hint">
+            <strong>Tài khoản mặc định:</strong><br>
+            Username: <strong>admin</strong> | Password: <strong>admin</strong>
+        </div>
+        
+        <div class="features">
+            <strong>Tính năng hệ thống:</strong>
+            <ul>
+                <li>Nhận diện khuôn mặt bằng ML</li>
+                <li>Điểm danh tự động</li>
+                <li>Phát hiện vi phạm (gian lận, ngủ gật)</li>
+                <li>Điều khiển LED từ xa</li>
+                <li>Giám sát nhiệt độ/độ ẩm</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Check if already logged in
+        window.addEventListener('load', () => {
+            const sessionId = localStorage.getItem('sessionId');
+            if (sessionId) {
+                // Verify session
+                fetch('/api/auth/check', {
+                    headers: { 'x-session-id': sessionId }
+                }).then(res => res.json())
+                  .then(data => {
+                      if (data.authenticated) {
+                          window.location.href = '/dashboard';
+                      }
+                  });
+            }
+        });
+        
+        async function login(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error');
+            const btn = document.getElementById('btnLogin');
+            
+            // Validation
+            if (!username || !password) {
+                errorDiv.textContent = '⚠️ Vui lòng nhập đầy đủ thông tin!';
+                errorDiv.classList.add('show');
+                return;
+            }
+            
+            // Loading state
+            btn.textContent = '⏳ Đang đăng nhập...';
+            btn.disabled = true;
+            errorDiv.classList.remove('show');
+            
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Save session ID
+                    localStorage.setItem('sessionId', data.sessionId);
+                    
+                    btn.textContent = '✅ Đăng nhập thành công!';
+                    btn.style.background = 'linear-gradient(135deg, #27ae60, #229954)';
+                    
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 500);
+                } else {
+                    errorDiv.textContent = data.message || '❌ Sai tài khoản hoặc mật khẩu!';
+                    errorDiv.classList.add('show');
+                    btn.textContent = 'Đăng Nhập';
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                errorDiv.textContent = '❌ Lỗi kết nối server! Kiểm tra server đã chạy chưa.';
+                errorDiv.classList.add('show');
+                btn.textContent = 'Đăng Nhập';
+                btn.disabled = false;
+            }
+        }
+        
+        // Enter to submit
+        document.getElementById('password').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                login(e);
+            }
+        });
+    </script>
+</body>
+</html>

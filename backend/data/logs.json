@@ -1,0 +1,138 @@
+[
+  {
+    "id": 17,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:54.495Z"
+  },
+  {
+    "id": 16,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:49.475Z"
+  },
+  {
+    "id": 15,
+    "type": "Gian lan (Quay dau)",
+    "level": "red",
+    "message": "sv1, Qlong: Gian lan (Quay dau)",
+    "name": "sv1, Qlong",
+    "timestamp": "2026-01-05T06:48:49.281Z"
+  },
+  {
+    "id": 14,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:44.474Z"
+  },
+  {
+    "id": 13,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:39.467Z"
+  },
+  {
+    "id": 12,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:34.472Z"
+  },
+  {
+    "id": 11,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 55%",
+    "temp": 21.8,
+    "hum": 55,
+    "timestamp": "2026-01-05T06:48:29.467Z"
+  },
+  {
+    "id": 10,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 56%",
+    "temp": 21.8,
+    "hum": 56,
+    "timestamp": "2026-01-05T06:48:24.463Z"
+  },
+  {
+    "id": 9,
+    "type": "Gian lan (Quay dau)",
+    "level": "red",
+    "message": "sv5, TuanKiet: Gian lan (Quay dau)",
+    "name": "sv5, TuanKiet",
+    "timestamp": "2026-01-05T06:48:20.048Z"
+  },
+  {
+    "id": 8,
+    "type": "env",
+    "message": "Nhiệt độ: 22°C, Độ ẩm: 56%",
+    "temp": 22,
+    "hum": 56,
+    "timestamp": "2026-01-05T06:48:19.459Z"
+  },
+  {
+    "id": 7,
+    "type": "Gian lan (Quay dau)",
+    "level": "red",
+    "message": "sv1, Qlong: Gian lan (Quay dau)",
+    "name": "sv1, Qlong",
+    "timestamp": "2026-01-05T06:48:19.036Z"
+  },
+  {
+    "id": 6,
+    "type": "env",
+    "message": "Nhiệt độ: 22.2°C, Độ ẩm: 57%",
+    "temp": 22.2,
+    "hum": 57,
+    "timestamp": "2026-01-05T06:48:14.461Z"
+  },
+  {
+    "id": 5,
+    "type": "Sai dong phuc",
+    "level": "green",
+    "message": "sv5, TuanKiet: Sai dong phuc",
+    "name": "sv5, TuanKiet",
+    "timestamp": "2026-01-05T06:48:12.594Z"
+  },
+  {
+    "id": 4,
+    "type": "env",
+    "message": "Nhiệt độ: 22.2°C, Độ ẩm: 57%",
+    "temp": 22.2,
+    "hum": 57,
+    "timestamp": "2026-01-05T06:48:09.467Z"
+  },
+  {
+    "id": 3,
+    "type": "Sai dong phuc",
+    "level": "green",
+    "message": "sv1, Qlong: Sai dong phuc",
+    "name": "sv1, Qlong",
+    "timestamp": "2026-01-05T06:48:05.803Z"
+  },
+  {
+    "id": 2,
+    "type": "env",
+    "message": "Nhiệt độ: 21.9°C, Độ ẩm: 57%",
+    "temp": 21.9,
+    "hum": 57,
+    "timestamp": "2026-01-05T06:48:00.843Z"
+  },
+  {
+    "id": 1,
+    "type": "env",
+    "message": "Nhiệt độ: 21.8°C, Độ ẩm: 57%",
+    "temp": 21.8,
+    "hum": 57,
+    "timestamp": "2026-01-05T06:47:55.847Z"
+  }
+]
