@@ -19,9 +19,6 @@ YUNET_MODEL = "face_detection_yunet_2023mar.onnx"
 ABSENT_THRESHOLD = 1
 TEMP_THRESHOLD = 30
 
-ESP_IP = "192.168.1.100"
-ESP_USER = "admin"
-ESP_PASS = "1234"
 
 # Cấu hình bảo mật
 ADMIN_USERNAME = "admin"
